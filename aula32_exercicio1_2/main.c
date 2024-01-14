@@ -10,7 +10,7 @@ int main() {
 	estava em “a”. Traduza seu algoritmo para a linguagem C e exiba os valores
 	na tela.
 */
-	int a, b;
+	int a, b, c;
 
 
     printf("\nDigite um número inteiro para a variável \"a\": ");
@@ -18,9 +18,9 @@ int main() {
     printf("\nDigite um número inteiro para a variável \"b\": ");
     scanf("%d", &b);
 
-	a += b;
-	b = a - b;
-	a -= b;
+	c = a;
+	a = b;
+	b = c;
 
 	printf("valor de \"a\": %d\tValor de \"b\": %d\n", a, b);
 
