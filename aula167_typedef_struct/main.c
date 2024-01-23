@@ -18,7 +18,7 @@ struct Pessoa2{
 
 int main() {
 	Pessoa pessoa1;
-	struct Pessoa2 pessoa3;
+	struct Pessoa2 pessoa2;
 
 	char aluno[100] = {};
 

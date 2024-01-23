@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-//	Aula 169 - Posso ter struct de struct
+//	Aula 172 - Como passar uma struct como parâmetro para um procedimento?
 
 typedef struct{
 	int dia, mes, ano;
@@ -14,9 +14,14 @@ typedef struct{
 	char sexo;
 }Pessoa;
 
+void imprimirPessoa(Pessoa p){
+	printf("\tNome:\t%s", p.nome);
+	printf("\tSexo:\t%c\n", p.sexo);
+	printf("\tNasc.:\t%d/%d/%d\n", p.dataNasc.dia, p.dataNasc.mes, p.dataNasc.ano);
+}
+
 int main() {
 	Pessoa pessoa;
-	DataNasc data;
 
 	printf("Digite o nome: ");
 	fgets(&pessoa.nome, 100, stdin);
@@ -25,8 +30,7 @@ int main() {
 	printf("Digite a data de nascimento(dd mm aaaa): ");
 	scanf("%d%d%d", &pessoa.dataNasc.dia, &pessoa.dataNasc.mes, &pessoa.dataNasc.ano);
 
-	printf("\n\nNome:\t%s\nSexo:\t%c\n", pessoa.nome, pessoa.sexo);
-	printf("Data de nasc.:\t%d/%d/%d\n", pessoa.dataNasc.dia, pessoa.dataNasc.mes, pessoa.dataNasc.ano);
+	imprimirPessoa(pessoa);
 
     return 0;
 }

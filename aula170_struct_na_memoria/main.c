@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-//	Aula 169 - Posso ter struct de struct
+//	Aula 170 - Quanto de memória uma struct precisa?
 
 typedef struct{
 	int dia, mes, ano;
@@ -17,6 +17,10 @@ typedef struct{
 int main() {
 	Pessoa pessoa;
 	DataNasc data;
+
+	printf("Pessoa pessoa: %d bytes\n", sizeof(pessoa));
+	printf("DataNasc data: %d bytes\n", sizeof(data));
+	printf("data.ano: %d bytes\n", sizeof(data.ano));
 
 	printf("Digite o nome: ");
 	fgets(&pessoa.nome, 100, stdin);
